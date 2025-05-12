@@ -59,7 +59,7 @@ export default function TableProject() {
         render: (value: string,record:IGetProject) => {
           return <>
           {
-            record.project_id ?  <Link href={`/management/detail_project?id=${record.project_id}`}>
+            record.project_id ?  <Link href={`/detail_project?id=${record.project_id}`}>
             <p className='text-xs font-medium break-words text-wrap max-w-96 pl-4'>{value.length > 30 ? `${value.slice(0, 30)}...`:value}</p>
           </Link> : <div className='text-xs font-medium break-words text-wrap max-w-96 flex items-center gap-2'><span><FaRegFolderOpen/></span> <p>{value.length > 30 ? `${value.slice(0, 30)}...`:value}</p></div>
           }

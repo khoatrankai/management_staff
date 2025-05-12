@@ -48,7 +48,7 @@ export default function TableWork() {
         render: (value: string,record:IGetWork) => {
           return <>
           {
-            record.work_id ?  <Link href={`/management/detail_work?id=${record.work_id}`}>
+            record.work_id ?  <Link href={`/detail_work?id=${record.work_id}`}>
             <p className='text-xs font-medium break-words text-wrap max-w-96 pl-4'>{value.length > 30 ? `${value.slice(0, 30)}...`:value}</p>
           </Link> : <div className='text-xs font-medium break-words text-wrap max-w-96 flex items-center gap-2'><span><FaRegFolderOpen/></span> <p>{value.length > 30 ? `${value.slice(0, 30)}...`:value}</p></div>
           }
