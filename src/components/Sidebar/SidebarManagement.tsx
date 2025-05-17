@@ -8,6 +8,9 @@ import useMedia from "use-media";
 import { HiClipboardDocumentCheck } from "react-icons/hi2";
 import { MdOutlineWorkHistory } from "react-icons/md";
 import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
+import { GrMoney, GrUserWorker } from "react-icons/gr";
+import { FaUser } from "react-icons/fa";
 
 // type Props = {};
 
@@ -23,7 +26,36 @@ const SlidebarManagement = () => {
   // );
   const isOpen = useSelector((state: RootState) => state.status_tab_menu);
   const itemsMenu = [
-    
+     {
+      key: "asset",
+      label: (
+        <Link
+          href="/asset"
+          className=""
+          onClick={() => {
+            if (isMobile) dispatch(toggleMenu());
+          }}
+        >
+          <span>Quản lý tài sản</span>
+        </Link>
+      ),
+      icon: <GrMoney />,
+    },
+    {
+      key: "contractor",
+      label: (
+        <Link
+          href="/contractor"
+          className=""
+          onClick={() => {
+            if (isMobile) dispatch(toggleMenu());
+          }}
+        >
+          <span>Quản lý nhà thầu</span>
+        </Link>
+      ),
+      icon: <GrUserWorker />,
+    },
     {
       key: "work",
       label: "Công việc",
@@ -187,6 +219,20 @@ const SlidebarManagement = () => {
         },
       ],
     },
+     {
+      key: "user",
+      icon: <FaUser />,
+      label: (
+        <Link
+          href="/user"
+          className=""
+          onClick={() => {
+            if (isMobile) dispatch(toggleMenu());
+          }}
+        >
+          <span>Người dùng</span>
+        </Link>
+      ),}
   ];
   return (
     <div

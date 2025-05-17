@@ -28,6 +28,6 @@
     ".next/types/**/*.ts",
     "src/components/Page/Sell/HeaderTTKbuy/HeaderTTKbuy.js",
     "src/components/Page/Sell/HeaderTTKbuy/HeaderTTKbuy.js"
-  ],
+, "src/components/Assets/ToolCustomer/ModalAsset/ModalAddAsset.tsx", "src/components/Assets/ToolCustomer/ModalAsset/ModalUpdateAsset.tsx"  ],
   "exclude": ["node_modules"]
 }
