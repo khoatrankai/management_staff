@@ -109,7 +109,7 @@ export default function Login() {
         <Image
           preview={false}
           alt=""
-          src="/logo.png"
+          src="/logo1.png"
           className=" h-full "
           height={80}
         />
@@ -121,7 +121,7 @@ export default function Login() {
           <Image
             preview={false}
             alt=""
-            src="/logo.png"
+            src="/logo1.png"
             className=" h-full w-full xl:hidden block"
             height={30}
           />
